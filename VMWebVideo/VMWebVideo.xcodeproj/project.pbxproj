@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		27411FB21A3B91DC0035D96B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27411FB11A3B91DC0035D96B /* main.m */; };
-		27411FB51A3B91DC0035D96B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27411FB41A3B91DC0035D96B /* AppDelegate.m */; };
-		27411FB81A3B91DC0035D96B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27411FB71A3B91DC0035D96B /* ViewController.m */; };
+		27411FB51A3B91DC0035D96B /* VMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27411FB41A3B91DC0035D96B /* VMAppDelegate.m */; };
+		27411FB81A3B91DC0035D96B /* VMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27411FB71A3B91DC0035D96B /* VMViewController.m */; };
 		27411FBD1A3B91DC0035D96B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27411FBC1A3B91DC0035D96B /* Images.xcassets */; };
 		27411FC01A3B91DC0035D96B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27411FBE1A3B91DC0035D96B /* LaunchScreen.xib */; };
 		27411FCC1A3B91DD0035D96B /* VMWebVideoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27411FCB1A3B91DD0035D96B /* VMWebVideoTests.m */; };
@@ -29,10 +29,10 @@
 		27411FAC1A3B91DC0035D96B /* VMWebVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VMWebVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27411FB01A3B91DC0035D96B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27411FB11A3B91DC0035D96B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		27411FB31A3B91DC0035D96B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		27411FB41A3B91DC0035D96B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		27411FB61A3B91DC0035D96B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		27411FB71A3B91DC0035D96B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		27411FB31A3B91DC0035D96B /* VMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMAppDelegate.h; sourceTree = "<group>"; };
+		27411FB41A3B91DC0035D96B /* VMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMAppDelegate.m; sourceTree = "<group>"; };
+		27411FB61A3B91DC0035D96B /* VMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMViewController.h; sourceTree = "<group>"; };
+		27411FB71A3B91DC0035D96B /* VMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMViewController.m; sourceTree = "<group>"; };
 		27411FBC1A3B91DC0035D96B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		27411FBF1A3B91DC0035D96B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		27411FC51A3B91DD0035D96B /* VMWebVideoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VMWebVideoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,13 +79,14 @@
 		27411FAE1A3B91DC0035D96B /* VMWebVideo */ = {
 			isa = PBXGroup;
 			children = (
-				27411FB31A3B91DC0035D96B /* AppDelegate.h */,
-				27411FB41A3B91DC0035D96B /* AppDelegate.m */,
-				27411FB61A3B91DC0035D96B /* ViewController.h */,
-				27411FB71A3B91DC0035D96B /* ViewController.m */,
+				27411FB31A3B91DC0035D96B /* VMAppDelegate.h */,
+				27411FB41A3B91DC0035D96B /* VMAppDelegate.m */,
+				433861081A3E31E200406782 /* Code */,
 				27411FBC1A3B91DC0035D96B /* Images.xcassets */,
 				27411FBE1A3B91DC0035D96B /* LaunchScreen.xib */,
 				27411FAF1A3B91DC0035D96B /* Supporting Files */,
+				27411FB61A3B91DC0035D96B /* VMViewController.h */,
+				27411FB71A3B91DC0035D96B /* VMViewController.m */,
 			);
 			path = VMWebVideo;
 			sourceTree = "<group>";
@@ -114,6 +115,13 @@
 				27411FCA1A3B91DD0035D96B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		433861081A3E31E200406782 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Code;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,8 +224,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27411FB81A3B91DC0035D96B /* ViewController.m in Sources */,
-				27411FB51A3B91DC0035D96B /* AppDelegate.m in Sources */,
+				27411FB81A3B91DC0035D96B /* VMViewController.m in Sources */,
+				27411FB51A3B91DC0035D96B /* VMAppDelegate.m in Sources */,
 				27411FB21A3B91DC0035D96B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

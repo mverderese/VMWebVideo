@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 VM Labs. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "VMAppDelegate.h"
 
-@interface AppDelegate ()
+@interface VMAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation VMAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

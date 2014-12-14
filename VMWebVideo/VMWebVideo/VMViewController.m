@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 VM Labs. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "VMViewController.h"
 
-@interface ViewController ()
+@interface VMViewController ()
 
 @end
 
-@implementation ViewController
+@implementation VMViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
