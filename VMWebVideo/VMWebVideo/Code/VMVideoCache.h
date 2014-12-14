@@ -30,13 +30,15 @@ typedef NS_ENUM(NSInteger, VMVideoCacheType) {
 
 
 typedef void(^VMVideoCacheQueryCompletionBlock)(NSString* videoDataFilePath, VMVideoCacheType cacheType);
-typedef void(^VMVideoCacheNoParamsBlock)(NSString* videoDataFilePath, VMVideoCacheType cacheType);
+typedef void(^VMVideoCacheNoParamsBlock)();
 
 
 
 
 
 @interface VMVideoCache : NSObject
+
+- (instancetype)initWithNamespace:(NSString *)ns;
 
 /**
  * The maximum length of time to keep an video in the cache, in seconds
