@@ -160,6 +160,7 @@
 		27411FA41A3B91DC0035D96B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = VM;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "VM Labs";
 				TargetAttributes = {
@@ -402,6 +403,7 @@
 				27411FD11A3B91DD0035D96B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27411FD21A3B91DD0035D96B /* Build configuration list for PBXNativeTarget "VMWebVideoTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +412,7 @@
 				27411FD41A3B91DD0035D96B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
