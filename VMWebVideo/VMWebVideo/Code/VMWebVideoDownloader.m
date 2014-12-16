@@ -9,7 +9,6 @@
 #import "VMWebVideoDownloader.h"
 
 #import "VMWebVideoDownloaderOperation.h"
-#import <ImageIO/ImageIO.h>
 
 NSString *const VMWebVideoDownloadStartNotification = @"VMWebVideoDownloadStartNotification";
 NSString *const VMWebVideoDownloadStopNotification = @"VMWebVideoDownloadStopNotification";
