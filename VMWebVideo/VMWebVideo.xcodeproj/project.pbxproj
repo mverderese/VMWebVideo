@@ -8,11 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		27411FB21A3B91DC0035D96B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27411FB11A3B91DC0035D96B /* main.m */; };
-		27411FB51A3B91DC0035D96B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27411FB41A3B91DC0035D96B /* AppDelegate.m */; };
-		27411FB81A3B91DC0035D96B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27411FB71A3B91DC0035D96B /* ViewController.m */; };
+		27411FB51A3B91DC0035D96B /* VMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27411FB41A3B91DC0035D96B /* VMAppDelegate.m */; };
+		27411FB81A3B91DC0035D96B /* VMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27411FB71A3B91DC0035D96B /* VMViewController.m */; };
 		27411FBD1A3B91DC0035D96B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27411FBC1A3B91DC0035D96B /* Images.xcassets */; };
 		27411FC01A3B91DC0035D96B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27411FBE1A3B91DC0035D96B /* LaunchScreen.xib */; };
 		27411FCC1A3B91DD0035D96B /* VMWebVideoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27411FCB1A3B91DD0035D96B /* VMWebVideoTests.m */; };
+		27D9A3221A3F68610023B8AD /* VMWebVideoDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D9A3211A3F68610023B8AD /* VMWebVideoDownloader.m */; };
+		27D9A3251A3F68820023B8AD /* VMWebVideoDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D9A3241A3F68820023B8AD /* VMWebVideoDownloaderOperation.m */; };
+		27D9A3291A3F690B0023B8AD /* VMWebVideoPrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D9A3281A3F690B0023B8AD /* VMWebVideoPrefetcher.m */; };
+		27D9A32E1A3F6DB00023B8AD /* VMWebVideoCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D9A32D1A3F6DB00023B8AD /* VMWebVideoCompat.m */; };
+		4338610B1A3E324700406782 /* VMWebVideoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338610A1A3E324700406782 /* VMWebVideoManager.m */; };
+		4338610E1A3E325F00406782 /* VMVideoCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4338610D1A3E325F00406782 /* VMVideoCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,15 +35,29 @@
 		27411FAC1A3B91DC0035D96B /* VMWebVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VMWebVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27411FB01A3B91DC0035D96B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27411FB11A3B91DC0035D96B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		27411FB31A3B91DC0035D96B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		27411FB41A3B91DC0035D96B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		27411FB61A3B91DC0035D96B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		27411FB71A3B91DC0035D96B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		27411FB31A3B91DC0035D96B /* VMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMAppDelegate.h; sourceTree = "<group>"; };
+		27411FB41A3B91DC0035D96B /* VMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMAppDelegate.m; sourceTree = "<group>"; };
+		27411FB61A3B91DC0035D96B /* VMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMViewController.h; sourceTree = "<group>"; };
+		27411FB71A3B91DC0035D96B /* VMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMViewController.m; sourceTree = "<group>"; };
 		27411FBC1A3B91DC0035D96B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		27411FBF1A3B91DC0035D96B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		27411FC51A3B91DD0035D96B /* VMWebVideoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VMWebVideoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27411FCA1A3B91DD0035D96B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27411FCB1A3B91DD0035D96B /* VMWebVideoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMWebVideoTests.m; sourceTree = "<group>"; };
+		27D9A3201A3F68610023B8AD /* VMWebVideoDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VMWebVideoDownloader.h; path = VMWebVideo/Code/VMWebVideoDownloader.h; sourceTree = SOURCE_ROOT; };
+		27D9A3211A3F68610023B8AD /* VMWebVideoDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VMWebVideoDownloader.m; path = VMWebVideo/Code/VMWebVideoDownloader.m; sourceTree = SOURCE_ROOT; };
+		27D9A3231A3F68820023B8AD /* VMWebVideoDownloaderOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMWebVideoDownloaderOperation.h; sourceTree = "<group>"; };
+		27D9A3241A3F68820023B8AD /* VMWebVideoDownloaderOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMWebVideoDownloaderOperation.m; sourceTree = "<group>"; };
+		27D9A3271A3F690B0023B8AD /* VMWebVideoPrefetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMWebVideoPrefetcher.h; sourceTree = "<group>"; };
+		27D9A3281A3F690B0023B8AD /* VMWebVideoPrefetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMWebVideoPrefetcher.m; sourceTree = "<group>"; };
+		27D9A32B1A3F6A1E0023B8AD /* VMWebVideoOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMWebVideoOperation.h; sourceTree = "<group>"; };
+		27D9A32C1A3F6DB00023B8AD /* VMWebVideoCompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMWebVideoCompat.h; sourceTree = "<group>"; };
+		27D9A32D1A3F6DB00023B8AD /* VMWebVideoCompat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMWebVideoCompat.m; sourceTree = "<group>"; };
+		433861091A3E324700406782 /* VMWebVideoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VMWebVideoManager.h; path = ../VMWebVideoManager.h; sourceTree = "<group>"; };
+		4338610A1A3E324700406782 /* VMWebVideoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VMWebVideoManager.m; path = ../VMWebVideoManager.m; sourceTree = "<group>"; };
+		4338610C1A3E325F00406782 /* VMVideoCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VMVideoCache.h; path = ../VMVideoCache.h; sourceTree = "<group>"; };
+		4338610D1A3E325F00406782 /* VMVideoCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VMVideoCache.m; path = ../VMVideoCache.m; sourceTree = "<group>"; };
+		433861121A3E337C00406782 /* RUSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUSingleton.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +99,14 @@
 		27411FAE1A3B91DC0035D96B /* VMWebVideo */ = {
 			isa = PBXGroup;
 			children = (
-				27411FB31A3B91DC0035D96B /* AppDelegate.h */,
-				27411FB41A3B91DC0035D96B /* AppDelegate.m */,
-				27411FB61A3B91DC0035D96B /* ViewController.h */,
-				27411FB71A3B91DC0035D96B /* ViewController.m */,
+				27411FB31A3B91DC0035D96B /* VMAppDelegate.h */,
+				27411FB41A3B91DC0035D96B /* VMAppDelegate.m */,
+				433861081A3E31E200406782 /* Code */,
 				27411FBC1A3B91DC0035D96B /* Images.xcassets */,
 				27411FBE1A3B91DC0035D96B /* LaunchScreen.xib */,
 				27411FAF1A3B91DC0035D96B /* Supporting Files */,
+				27411FB61A3B91DC0035D96B /* VMViewController.h */,
+				27411FB71A3B91DC0035D96B /* VMViewController.m */,
 			);
 			path = VMWebVideo;
 			sourceTree = "<group>";
@@ -114,6 +135,75 @@
 				27411FCA1A3B91DD0035D96B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27D9A31C1A3F681A0023B8AD /* Downloader */ = {
+			isa = PBXGroup;
+			children = (
+				27D9A3201A3F68610023B8AD /* VMWebVideoDownloader.h */,
+				27D9A3211A3F68610023B8AD /* VMWebVideoDownloader.m */,
+				27D9A3231A3F68820023B8AD /* VMWebVideoDownloaderOperation.h */,
+				27D9A3241A3F68820023B8AD /* VMWebVideoDownloaderOperation.m */,
+			);
+			name = Downloader;
+			sourceTree = "<group>";
+		};
+		27D9A31D1A3F681E0023B8AD /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				4338610C1A3E325F00406782 /* VMVideoCache.h */,
+				4338610D1A3E325F00406782 /* VMVideoCache.m */,
+			);
+			name = Cache;
+			sourceTree = "<group>";
+		};
+		27D9A31E1A3F68220023B8AD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				433861091A3E324700406782 /* VMWebVideoManager.h */,
+				4338610A1A3E324700406782 /* VMWebVideoManager.m */,
+				27D9A3271A3F690B0023B8AD /* VMWebVideoPrefetcher.h */,
+				27D9A3281A3F690B0023B8AD /* VMWebVideoPrefetcher.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		433861081A3E31E200406782 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				4338610F1A3E337C00406782 /* Library */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		4338610F1A3E337C00406782 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				27D9A32C1A3F6DB00023B8AD /* VMWebVideoCompat.h */,
+				27D9A32D1A3F6DB00023B8AD /* VMWebVideoCompat.m */,
+				27D9A32B1A3F6A1E0023B8AD /* VMWebVideoOperation.h */,
+				27D9A31C1A3F681A0023B8AD /* Downloader */,
+				27D9A31D1A3F681E0023B8AD /* Cache */,
+				27D9A31E1A3F68220023B8AD /* Utils */,
+				433861101A3E337C00406782 /* ResplendentUtilities */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		433861101A3E337C00406782 /* ResplendentUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				433861111A3E337C00406782 /* Misc */,
+			);
+			path = ResplendentUtilities;
+			sourceTree = "<group>";
+		};
+		433861111A3E337C00406782 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				433861121A3E337C00406782 /* RUSingleton.h */,
+			);
+			path = Misc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +250,7 @@
 		27411FA41A3B91DC0035D96B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = VM;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "VM Labs";
 				TargetAttributes = {
@@ -215,8 +306,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27411FB81A3B91DC0035D96B /* ViewController.m in Sources */,
-				27411FB51A3B91DC0035D96B /* AppDelegate.m in Sources */,
+				4338610E1A3E325F00406782 /* VMVideoCache.m in Sources */,
+				27D9A3291A3F690B0023B8AD /* VMWebVideoPrefetcher.m in Sources */,
+				27411FB81A3B91DC0035D96B /* VMViewController.m in Sources */,
+				27D9A32E1A3F6DB00023B8AD /* VMWebVideoCompat.m in Sources */,
+				27D9A3221A3F68610023B8AD /* VMWebVideoDownloader.m in Sources */,
+				4338610B1A3E324700406782 /* VMWebVideoManager.m in Sources */,
+				27D9A3251A3F68820023B8AD /* VMWebVideoDownloaderOperation.m in Sources */,
+				27411FB51A3B91DC0035D96B /* VMAppDelegate.m in Sources */,
 				27411FB21A3B91DC0035D96B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,7 +382,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -321,7 +418,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -402,6 +499,7 @@
 				27411FD11A3B91DD0035D96B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27411FD21A3B91DD0035D96B /* Build configuration list for PBXNativeTarget "VMWebVideoTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +508,7 @@
 				27411FD41A3B91DD0035D96B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
