@@ -7,35 +7,57 @@
 //
 
 #import "VMVideoCache.h"
+
+#import "RUSingleton.h"
 #import <CommonCrypto/CommonDigest.h>
+
+
+
+
 
 static const NSInteger kDefaultCacheMaxCacheAge = 60 * 60 * 24 * 7; // 1 week
 
+
+
+
+
 @interface VMVideoCache ()
 
-@property (strong, nonatomic) NSString *diskCachePath;
-@property (strong, nonatomic) NSMutableArray *customPaths;
-@property (VMDispatchQueueSetterSementics, nonatomic) dispatch_queue_t ioQueue;
+@property (nonatomic, readonly) NSFileManager *fileManager;
+@property (strong, nonatomic, readonly) NSString *diskCachePath;
+@property (strong, nonatomic, readonly) NSMutableArray *customPaths;
+@property (VMDispatchQueueSetterSementics, nonatomic, readonly) dispatch_queue_t ioQueue;
+
+- (void)addReadOnlyCachePath:(NSString *)path;
+- (NSString *)cachePathForKey:(NSString *)key inPath:(NSString *)path;
+- (NSString *)defaultCachePathForKey:(NSString *)key;
+
+- (NSString *)cachedFileNameForKey:(NSString *)key;
+
+- (void)backgroundCleanDisk;
+
+- (NSUInteger)getSize;
+- (NSUInteger)getDiskCount;
 
 @end
 
-@implementation VMVideoCache {
-    NSFileManager *_fileManager;
-}
 
-+ (VMVideoCache *)sharedVidoeCache {
-    static dispatch_once_t once;
-    static id instance;
-    dispatch_once(&once, ^{
-        instance = [self new];
-    });
-    return instance;
-}
 
+
+
+@implementation VMVideoCache
+
+#pragma mark - NSObject
 - (id)init {
     return [self initWithNamespace:@"default"];
 }
 
+- (void)dealloc {
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
+	VMDispatchQueueRelease(self.ioQueue);
+}
+
+#pragma mark - VMVideoCache
 - (id)initWithNamespace:(NSString *)ns {
     if ((self = [super init])) {
         NSString *fullNamespace = [@"com.vmlabs.VMWebVideoCache." stringByAppendingString:ns];
@@ -50,7 +72,8 @@ static const NSInteger kDefaultCacheMaxCacheAge = 60 * 60 * 24 * 7; // 1 week
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
         _diskCachePath = [paths[0] stringByAppendingPathComponent:fullNamespace];
         
-        dispatch_sync(_ioQueue, ^{
+        dispatch_sync(self.ioQueue, ^{
+			//Performed on
             _fileManager = [NSFileManager new];
         });
         
@@ -72,14 +95,9 @@ static const NSInteger kDefaultCacheMaxCacheAge = 60 * 60 * 24 * 7; // 1 week
     return self;
 }
 
-- (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    VMDispatchQueueRelease(_ioQueue);
-}
-
 - (void)addReadOnlyCachePath:(NSString *)path {
     if (!self.customPaths) {
-        self.customPaths = [NSMutableArray new];
+        _customPaths = [NSMutableArray new];
     }
     
     if (![self.customPaths containsObject:path]) {
@@ -124,12 +142,12 @@ static const NSInteger kDefaultCacheMaxCacheAge = 60 * 60 * 24 * 7; // 1 week
     dispatch_async(self.ioQueue, ^{
         
         if (videoData) {
-            if (![_fileManager fileExistsAtPath:_diskCachePath]) {
-                [_fileManager createDirectoryAtPath:_diskCachePath withIntermediateDirectories:YES attributes:nil error:NULL];
+            if (![self.fileManager fileExistsAtPath:self.diskCachePath]) {
+                [self.fileManager createDirectoryAtPath:self.diskCachePath withIntermediateDirectories:YES attributes:nil error:NULL];
             }
             
             NSString *path = [self defaultCachePathForKey:key];
-            [_fileManager createFileAtPath:path contents:videoData attributes:nil];
+            [self.fileManager createFileAtPath:path contents:videoData attributes:nil];
             if(completion) {
                 completion([NSURL fileURLWithPath:path], VMVideoCacheTypeNone);
             }
@@ -157,8 +175,8 @@ static const NSInteger kDefaultCacheMaxCacheAge = 60 * 60 * 24 * 7; // 1 week
 }
 
 - (void)videoExistsWithKey:(NSString *)key completion:(VMWebVideoCheckCacheCompletionBlock)completionBlock {
-    dispatch_async(_ioQueue, ^{
-        BOOL exists = [_fileManager fileExistsAtPath:[self defaultCachePathForKey:key]];
+    dispatch_async(self.ioQueue, ^{
+        BOOL exists = [self.fileManager fileExistsAtPath:[self defaultCachePathForKey:key]];
         if (completionBlock) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 completionBlock(exists);
@@ -286,7 +304,7 @@ static const NSInteger kDefaultCacheMaxCacheAge = 60 * 60 * 24 * 7; // 1 week
     }
     
     dispatch_async(self.ioQueue, ^{
-        [_fileManager removeItemAtPath:[self defaultCachePathForKey:key] error:nil];
+        [self.fileManager removeItemAtPath:[self defaultCachePathForKey:key] error:nil];
         
         if (completion) {
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -304,8 +322,8 @@ static const NSInteger kDefaultCacheMaxCacheAge = 60 * 60 * 24 * 7; // 1 week
 - (void)clearDiskOnCompletion:(VMWebVideoNoParamsBlock)completion
 {
     dispatch_async(self.ioQueue, ^{
-        [_fileManager removeItemAtPath:self.diskCachePath error:nil];
-        [_fileManager createDirectoryAtPath:self.diskCachePath
+        [self.fileManager removeItemAtPath:self.diskCachePath error:nil];
+        [self.fileManager createDirectoryAtPath:self.diskCachePath
                 withIntermediateDirectories:YES
                                  attributes:nil
                                       error:NULL];
@@ -328,7 +346,7 @@ static const NSInteger kDefaultCacheMaxCacheAge = 60 * 60 * 24 * 7; // 1 week
         NSArray *resourceKeys = @[NSURLIsDirectoryKey, NSURLContentModificationDateKey, NSURLTotalFileAllocatedSizeKey];
         
         // This enumerator prefetches useful properties for our cache files.
-        NSDirectoryEnumerator *fileEnumerator = [_fileManager enumeratorAtURL:diskCacheURL
+        NSDirectoryEnumerator *fileEnumerator = [self.fileManager enumeratorAtURL:diskCacheURL
                                                    includingPropertiesForKeys:resourceKeys
                                                                       options:NSDirectoryEnumerationSkipsHiddenFiles
                                                                  errorHandler:NULL];
@@ -364,7 +382,7 @@ static const NSInteger kDefaultCacheMaxCacheAge = 60 * 60 * 24 * 7; // 1 week
         }
         
         for (NSURL *fileURL in urlsToDelete) {
-            [_fileManager removeItemAtURL:fileURL error:nil];
+            [self.fileManager removeItemAtURL:fileURL error:nil];
         }
         
         // If our remaining disk cache exceeds a configured maximum size, perform a second
@@ -381,7 +399,7 @@ static const NSInteger kDefaultCacheMaxCacheAge = 60 * 60 * 24 * 7; // 1 week
             
             // Delete files until we fall below our desired cache size.
             for (NSURL *fileURL in sortedFiles) {
-                if ([_fileManager removeItemAtURL:fileURL error:nil]) {
+                if ([self.fileManager removeItemAtURL:fileURL error:nil]) {
                     NSDictionary *resourceValues = cacheFiles[fileURL];
                     NSNumber *totalAllocatedSize = resourceValues[NSURLTotalFileAllocatedSizeKey];
                     currentCacheSize -= [totalAllocatedSize unsignedIntegerValue];
@@ -419,7 +437,7 @@ static const NSInteger kDefaultCacheMaxCacheAge = 60 * 60 * 24 * 7; // 1 week
 - (NSUInteger)getSize {
     __block NSUInteger size = 0;
     dispatch_sync(self.ioQueue, ^{
-        NSDirectoryEnumerator *fileEnumerator = [_fileManager enumeratorAtPath:self.diskCachePath];
+        NSDirectoryEnumerator *fileEnumerator = [self.fileManager enumeratorAtPath:self.diskCachePath];
         for (NSString *fileName in fileEnumerator) {
             NSString *filePath = [self.diskCachePath stringByAppendingPathComponent:fileName];
             NSDictionary *attrs = [[NSFileManager defaultManager] attributesOfItemAtPath:filePath error:nil];
@@ -432,7 +450,7 @@ static const NSInteger kDefaultCacheMaxCacheAge = 60 * 60 * 24 * 7; // 1 week
 - (NSUInteger)getDiskCount {
     __block NSUInteger count = 0;
     dispatch_sync(self.ioQueue, ^{
-        NSDirectoryEnumerator *fileEnumerator = [_fileManager enumeratorAtPath:self.diskCachePath];
+        NSDirectoryEnumerator *fileEnumerator = [self.fileManager enumeratorAtPath:self.diskCachePath];
         count = [[fileEnumerator allObjects] count];
     });
     return count;
@@ -445,7 +463,7 @@ static const NSInteger kDefaultCacheMaxCacheAge = 60 * 60 * 24 * 7; // 1 week
         NSUInteger fileCount = 0;
         NSUInteger totalSize = 0;
         
-        NSDirectoryEnumerator *fileEnumerator = [_fileManager enumeratorAtURL:diskCacheURL
+        NSDirectoryEnumerator *fileEnumerator = [self.fileManager enumeratorAtURL:diskCacheURL
                                                    includingPropertiesForKeys:@[NSFileSize]
                                                                       options:NSDirectoryEnumerationSkipsHiddenFiles
                                                                  errorHandler:NULL];
@@ -464,5 +482,8 @@ static const NSInteger kDefaultCacheMaxCacheAge = 60 * 60 * 24 * 7; // 1 week
         }
     });
 }
+
+#pragma mark - Singleton
+RUSingletonUtil_Synthesize_Singleton_Implementation(sharedVidoeCache);
 
 @end
