@@ -1,0 +1,6 @@
+framework module VMWebVideo {
+  umbrella header "VMWebVideo-umbrella.h"
+
+  export *
+  module * { export * }
+}

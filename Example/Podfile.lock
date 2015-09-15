@@ -1,0 +1,14 @@
+PODS:
+  - VMWebVideo (1.0.0)
+
+DEPENDENCIES:
+  - VMWebVideo (from `../`)
+
+EXTERNAL SOURCES:
+  VMWebVideo:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  VMWebVideo: 91a2b85ab3385bef4b12161affa93ec69424743e
+
+COCOAPODS: 0.38.2

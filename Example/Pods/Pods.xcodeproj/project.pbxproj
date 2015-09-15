@@ -1,0 +1,670 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0074802993647B904797969BB1F5B1A8 /* VMWebVideo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7F67145185B2F37CF465B16A6C7D57F1 /* VMWebVideo.bundle */; };
+		0794EF07712FA5541C966DCD4435E181 /* VMWebVideoDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C59A2E2ECFB42642ED32EA0991C1C08 /* VMWebVideoDownloader.m */; };
+		14E7362B8E13C1F5F95804FA6675505D /* VMWebVideoPrefetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E95E71300B29FBC8A189A42D26D8426 /* VMWebVideoPrefetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A768C279A9DFD7E9907BDA19F617499 /* VMWebVideoPrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4074607E69AE4CAF3B5C84A06B598FC6 /* VMWebVideoPrefetcher.m */; };
+		3F6B361E1CF760FB84FBDDD2DA8697E6 /* VMWebVideoCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = 521819B4CD485054126D841304A605B5 /* VMWebVideoCompat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		475B62831A74DEACB71E645785580FD0 /* VMWebVideo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 281285B43B81FE3BAC4B8705235B5ECC /* VMWebVideo-dummy.m */; };
+		4A18E89527FCCDE7E918C23295E0AFC2 /* VMVideoCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4B492E2E9B003960C7666825D81334 /* VMVideoCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		568B406D62F8BD46C1F889CB274F9301 /* VMWebVideo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 80BBC48B5FDBC09416A8A4B20F64B911 /* VMWebVideo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		583F5D5B3A7B0803741D812EDDCFC569 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002B58B2619981A4B89E3196C324B6FE /* Foundation.framework */; };
+		65A579D9B41B841D8220AD9AA3BE704A /* VMVideoCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DC462C2CE33F25CB3AC635733C2DD978 /* VMVideoCache.m */; };
+		7366373FC99492F13C4D546FA09B02E3 /* VMWebVideoOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = D6B3DF0A74568B0E85DAC3CF36DBE04A /* VMWebVideoOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F39A95C229B9077D3AA5E999648D34F /* VMWebVideoDownloaderOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = DB83A0E5A3D2DFD37654ED96BA755CCE /* VMWebVideoDownloaderOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B02045DFF5AFAF948D85D4D39498E1B2 /* VMWebVideoCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 6616AF4494C88AF53BD830523DD74071 /* VMWebVideoCompat.m */; };
+		B0503888CEB2DBDA043582CBB36F9B66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002B58B2619981A4B89E3196C324B6FE /* Foundation.framework */; };
+		CBFA767BD9F0F3C7181196F5B3478B6F /* Pods-VMWebVideo_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EA80F110EB06935F7ADCDC59D842FC /* Pods-VMWebVideo_Tests-dummy.m */; };
+		D7226A6565FD334898C05CB8F262F050 /* VMWebVideoDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4961C5848EE2EC930E9934075A4E2484 /* VMWebVideoDownloaderOperation.m */; };
+		DC29863D288EF3C1F471A25ADAEB7107 /* VMWebVideoDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = F4DF71BA076E1F94A5C9C0AB3CDF79F1 /* VMWebVideoDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3740C11CB0663E328139A039E1EA306 /* VMWebVideoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B41159078147A332B5395253F6F4E3C /* VMWebVideoManager.m */; };
+		E466497C728D56939AB281253E02BF91 /* VMWebVideoManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EA88CE38969E3CDDF76594C39BEBB5F /* VMWebVideoManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F1581AFF374A15F688E9D85FDC18F135 /* Pods-VMWebVideo_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 83B078D5FEE1569CF29347E64024B13B /* Pods-VMWebVideo_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF0B3DF714BB1515EE1F17EE45B81025 /* VMSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = C3C55BB1A19C6B14262A0E975CC886FD /* VMSingleton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		49DD8544579DDDFBFD43D26DDA8D62D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D68CC04A17FFB31AEFB51E6C403DD89;
+			remoteInfo = "VMWebVideo-VMWebVideo";
+		};
+		EEDA8C45BFB5C7CE6BF37DF7DBA00793 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8359828F20689C698680384368E0A1A0;
+			remoteInfo = VMWebVideo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		002B58B2619981A4B89E3196C324B6FE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		0B282C491B262A2B51CBC22F0AC7E43F /* Pods-VMWebVideo_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VMWebVideo_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		0C59A2E2ECFB42642ED32EA0991C1C08 /* VMWebVideoDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VMWebVideoDownloader.m; sourceTree = "<group>"; };
+		15C9BDD8DD5ADF3CDBA29918A5CAB509 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		196E2BF3D032EF0C1BA093ED659C8252 /* Pods_VMWebVideo_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VMWebVideo_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B41159078147A332B5395253F6F4E3C /* VMWebVideoManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VMWebVideoManager.m; sourceTree = "<group>"; };
+		1EA88CE38969E3CDDF76594C39BEBB5F /* VMWebVideoManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VMWebVideoManager.h; sourceTree = "<group>"; };
+		21B5621D39BC90D7E8A5D6665959A167 /* VMWebVideo-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VMWebVideo-prefix.pch"; sourceTree = "<group>"; };
+		281285B43B81FE3BAC4B8705235B5ECC /* VMWebVideo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VMWebVideo-dummy.m"; sourceTree = "<group>"; };
+		296D0DB2CAE80732244007C2F296EBE3 /* Pods-VMWebVideo_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-VMWebVideo_Tests.modulemap"; sourceTree = "<group>"; };
+		2E95E71300B29FBC8A189A42D26D8426 /* VMWebVideoPrefetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VMWebVideoPrefetcher.h; sourceTree = "<group>"; };
+		338C6A127B7B10DEC73D3B9F04420F3C /* Pods-VMWebVideo_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VMWebVideo_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		3ADC6D14515AC1144A325C1607DD99C1 /* VMWebVideo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VMWebVideo.xcconfig; sourceTree = "<group>"; };
+		4074607E69AE4CAF3B5C84A06B598FC6 /* VMWebVideoPrefetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VMWebVideoPrefetcher.m; sourceTree = "<group>"; };
+		4961C5848EE2EC930E9934075A4E2484 /* VMWebVideoDownloaderOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VMWebVideoDownloaderOperation.m; sourceTree = "<group>"; };
+		5102FB507E3ACA651CF406F7D3B44307 /* Pods-VMWebVideo_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VMWebVideo_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		521819B4CD485054126D841304A605B5 /* VMWebVideoCompat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VMWebVideoCompat.h; sourceTree = "<group>"; };
+		56EA80F110EB06935F7ADCDC59D842FC /* Pods-VMWebVideo_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VMWebVideo_Tests-dummy.m"; sourceTree = "<group>"; };
+		6616AF4494C88AF53BD830523DD74071 /* VMWebVideoCompat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VMWebVideoCompat.m; sourceTree = "<group>"; };
+		6ABB2E5CCFF0532CD1CA6988A48CDC14 /* Pods-VMWebVideo_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VMWebVideo_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		6E4B492E2E9B003960C7666825D81334 /* VMVideoCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VMVideoCache.h; sourceTree = "<group>"; };
+		728D49C8DDF679B1DECD71671A9D48F3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F67145185B2F37CF465B16A6C7D57F1 /* VMWebVideo.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VMWebVideo.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		80BBC48B5FDBC09416A8A4B20F64B911 /* VMWebVideo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VMWebVideo-umbrella.h"; sourceTree = "<group>"; };
+		83B078D5FEE1569CF29347E64024B13B /* Pods-VMWebVideo_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VMWebVideo_Tests-umbrella.h"; sourceTree = "<group>"; };
+		8D47155ABCB3D54B3318148B9FB93660 /* VMWebVideo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VMWebVideo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9583CC6B4634CAA6CC66C51349CE8D3B /* Pods-VMWebVideo_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VMWebVideo_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9C61E4C1D96C22D4C5F6AAD9D0E82F4D /* Pods-VMWebVideo_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VMWebVideo_Tests-resources.sh"; sourceTree = "<group>"; };
+		B65FDFDB03AC7194CDE4BAEFDF3085C2 /* VMWebVideo-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "VMWebVideo-Private.xcconfig"; sourceTree = "<group>"; };
+		B7C5B99CD43DD1AD1C1C9919A5788F63 /* VMWebVideo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = VMWebVideo.modulemap; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C3C55BB1A19C6B14262A0E975CC886FD /* VMSingleton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VMSingleton.h; sourceTree = "<group>"; };
+		D6B3DF0A74568B0E85DAC3CF36DBE04A /* VMWebVideoOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VMWebVideoOperation.h; sourceTree = "<group>"; };
+		DB83A0E5A3D2DFD37654ED96BA755CCE /* VMWebVideoDownloaderOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VMWebVideoDownloaderOperation.h; sourceTree = "<group>"; };
+		DC462C2CE33F25CB3AC635733C2DD978 /* VMVideoCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VMVideoCache.m; sourceTree = "<group>"; };
+		F4DF71BA076E1F94A5C9C0AB3CDF79F1 /* VMWebVideoDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VMWebVideoDownloader.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1FD701EB194D680F3E4C2F898153C8E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70EE38EE89837201F7FCACDE46FF3221 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				583F5D5B3A7B0803741D812EDDCFC569 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB3774324054E01827EFA2A1C2D3FFE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0503888CEB2DBDA043582CBB36F9B66 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				002B58B2619981A4B89E3196C324B6FE /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		69114F6B4CF6396C0B438FD7B56C04BA /* VMWebVideo */ = {
+			isa = PBXGroup;
+			children = (
+				EA3A31DF596F34BB4E94E31F60569B8E /* Pod */,
+				AA8EA5F7559F640204B95B37884F73EF /* Support Files */,
+			);
+			name = VMWebVideo;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		78D49C5A4E2BFAC1C554DCA90B7756FE /* Pods-VMWebVideo_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				15C9BDD8DD5ADF3CDBA29918A5CAB509 /* Info.plist */,
+				296D0DB2CAE80732244007C2F296EBE3 /* Pods-VMWebVideo_Tests.modulemap */,
+				9583CC6B4634CAA6CC66C51349CE8D3B /* Pods-VMWebVideo_Tests-acknowledgements.markdown */,
+				6ABB2E5CCFF0532CD1CA6988A48CDC14 /* Pods-VMWebVideo_Tests-acknowledgements.plist */,
+				56EA80F110EB06935F7ADCDC59D842FC /* Pods-VMWebVideo_Tests-dummy.m */,
+				0B282C491B262A2B51CBC22F0AC7E43F /* Pods-VMWebVideo_Tests-frameworks.sh */,
+				9C61E4C1D96C22D4C5F6AAD9D0E82F4D /* Pods-VMWebVideo_Tests-resources.sh */,
+				83B078D5FEE1569CF29347E64024B13B /* Pods-VMWebVideo_Tests-umbrella.h */,
+				5102FB507E3ACA651CF406F7D3B44307 /* Pods-VMWebVideo_Tests.debug.xcconfig */,
+				338C6A127B7B10DEC73D3B9F04420F3C /* Pods-VMWebVideo_Tests.release.xcconfig */,
+			);
+			name = "Pods-VMWebVideo_Tests";
+			path = "Target Support Files/Pods-VMWebVideo_Tests";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				8ECD38133EB65EB829FFC1B8174245D5 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
+				8D9FC23C66B7D2079F15AE03367F9847 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8D9FC23C66B7D2079F15AE03367F9847 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				78D49C5A4E2BFAC1C554DCA90B7756FE /* Pods-VMWebVideo_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		8ECD38133EB65EB829FFC1B8174245D5 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				69114F6B4CF6396C0B438FD7B56C04BA /* VMWebVideo */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		AA8EA5F7559F640204B95B37884F73EF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				728D49C8DDF679B1DECD71671A9D48F3 /* Info.plist */,
+				B7C5B99CD43DD1AD1C1C9919A5788F63 /* VMWebVideo.modulemap */,
+				3ADC6D14515AC1144A325C1607DD99C1 /* VMWebVideo.xcconfig */,
+				B65FDFDB03AC7194CDE4BAEFDF3085C2 /* VMWebVideo-Private.xcconfig */,
+				281285B43B81FE3BAC4B8705235B5ECC /* VMWebVideo-dummy.m */,
+				21B5621D39BC90D7E8A5D6665959A167 /* VMWebVideo-prefix.pch */,
+				80BBC48B5FDBC09416A8A4B20F64B911 /* VMWebVideo-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/VMWebVideo";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53F661C0CA7190D2CF05023FB33D61E4 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				196E2BF3D032EF0C1BA093ED659C8252 /* Pods_VMWebVideo_Tests.framework */,
+				7F67145185B2F37CF465B16A6C7D57F1 /* VMWebVideo.bundle */,
+				8D47155ABCB3D54B3318148B9FB93660 /* VMWebVideo.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA3A31DF596F34BB4E94E31F60569B8E /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				F6ABA20FECFBAEEE213A21988BCD090C /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		F6ABA20FECFBAEEE213A21988BCD090C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C3C55BB1A19C6B14262A0E975CC886FD /* VMSingleton.h */,
+				6E4B492E2E9B003960C7666825D81334 /* VMVideoCache.h */,
+				DC462C2CE33F25CB3AC635733C2DD978 /* VMVideoCache.m */,
+				521819B4CD485054126D841304A605B5 /* VMWebVideoCompat.h */,
+				6616AF4494C88AF53BD830523DD74071 /* VMWebVideoCompat.m */,
+				F4DF71BA076E1F94A5C9C0AB3CDF79F1 /* VMWebVideoDownloader.h */,
+				0C59A2E2ECFB42642ED32EA0991C1C08 /* VMWebVideoDownloader.m */,
+				DB83A0E5A3D2DFD37654ED96BA755CCE /* VMWebVideoDownloaderOperation.h */,
+				4961C5848EE2EC930E9934075A4E2484 /* VMWebVideoDownloaderOperation.m */,
+				1EA88CE38969E3CDDF76594C39BEBB5F /* VMWebVideoManager.h */,
+				1B41159078147A332B5395253F6F4E3C /* VMWebVideoManager.m */,
+				D6B3DF0A74568B0E85DAC3CF36DBE04A /* VMWebVideoOperation.h */,
+				2E95E71300B29FBC8A189A42D26D8426 /* VMWebVideoPrefetcher.h */,
+				4074607E69AE4CAF3B5C84A06B598FC6 /* VMWebVideoPrefetcher.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2C12C9CE396E3DF5FC3627A0648CED4E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF0B3DF714BB1515EE1F17EE45B81025 /* VMSingleton.h in Headers */,
+				4A18E89527FCCDE7E918C23295E0AFC2 /* VMVideoCache.h in Headers */,
+				568B406D62F8BD46C1F889CB274F9301 /* VMWebVideo-umbrella.h in Headers */,
+				3F6B361E1CF760FB84FBDDD2DA8697E6 /* VMWebVideoCompat.h in Headers */,
+				DC29863D288EF3C1F471A25ADAEB7107 /* VMWebVideoDownloader.h in Headers */,
+				9F39A95C229B9077D3AA5E999648D34F /* VMWebVideoDownloaderOperation.h in Headers */,
+				E466497C728D56939AB281253E02BF91 /* VMWebVideoManager.h in Headers */,
+				7366373FC99492F13C4D546FA09B02E3 /* VMWebVideoOperation.h in Headers */,
+				14E7362B8E13C1F5F95804FA6675505D /* VMWebVideoPrefetcher.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9ED99771CBD9CBDC29DCE9D40B1E4FF3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1581AFF374A15F688E9D85FDC18F135 /* Pods-VMWebVideo_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4D68CC04A17FFB31AEFB51E6C403DD89 /* VMWebVideo-VMWebVideo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6280709CC3FC3D09764A3D31ABA57282 /* Build configuration list for PBXNativeTarget "VMWebVideo-VMWebVideo" */;
+			buildPhases = (
+				7782CD85515A7F7BEF2FE3E9483E8FDE /* Sources */,
+				1FD701EB194D680F3E4C2F898153C8E0 /* Frameworks */,
+				384EFA6685E2C0217F7D21EC82FD6644 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VMWebVideo-VMWebVideo";
+			productName = "VMWebVideo-VMWebVideo";
+			productReference = 7F67145185B2F37CF465B16A6C7D57F1 /* VMWebVideo.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		61EF95F3966EEB7CBDD296655E548E71 /* Pods-VMWebVideo_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7659B9BB83138B6DBCAFD41FF8073DC8 /* Build configuration list for PBXNativeTarget "Pods-VMWebVideo_Tests" */;
+			buildPhases = (
+				EEA81463AFBA318C433A1B5C12692F76 /* Sources */,
+				70EE38EE89837201F7FCACDE46FF3221 /* Frameworks */,
+				9ED99771CBD9CBDC29DCE9D40B1E4FF3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				620D2030F772220CCF780059C57BF47F /* PBXTargetDependency */,
+			);
+			name = "Pods-VMWebVideo_Tests";
+			productName = "Pods-VMWebVideo_Tests";
+			productReference = 196E2BF3D032EF0C1BA093ED659C8252 /* Pods_VMWebVideo_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8359828F20689C698680384368E0A1A0 /* VMWebVideo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E209D52773272476ECCD259B9348DCD /* Build configuration list for PBXNativeTarget "VMWebVideo" */;
+			buildPhases = (
+				8CA0E493024502875F21465923E7CAA7 /* Sources */,
+				EB3774324054E01827EFA2A1C2D3FFE4 /* Frameworks */,
+				D25D00C2DDF661D145252A727640AB01 /* Resources */,
+				2C12C9CE396E3DF5FC3627A0648CED4E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED460D13937CB875529FF6C53FA09864 /* PBXTargetDependency */,
+			);
+			name = VMWebVideo;
+			productName = VMWebVideo;
+			productReference = 8D47155ABCB3D54B3318148B9FB93660 /* VMWebVideo.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				61EF95F3966EEB7CBDD296655E548E71 /* Pods-VMWebVideo_Tests */,
+				8359828F20689C698680384368E0A1A0 /* VMWebVideo */,
+				4D68CC04A17FFB31AEFB51E6C403DD89 /* VMWebVideo-VMWebVideo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		384EFA6685E2C0217F7D21EC82FD6644 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D25D00C2DDF661D145252A727640AB01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0074802993647B904797969BB1F5B1A8 /* VMWebVideo.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7782CD85515A7F7BEF2FE3E9483E8FDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CA0E493024502875F21465923E7CAA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65A579D9B41B841D8220AD9AA3BE704A /* VMVideoCache.m in Sources */,
+				475B62831A74DEACB71E645785580FD0 /* VMWebVideo-dummy.m in Sources */,
+				B02045DFF5AFAF948D85D4D39498E1B2 /* VMWebVideoCompat.m in Sources */,
+				0794EF07712FA5541C966DCD4435E181 /* VMWebVideoDownloader.m in Sources */,
+				D7226A6565FD334898C05CB8F262F050 /* VMWebVideoDownloaderOperation.m in Sources */,
+				E3740C11CB0663E328139A039E1EA306 /* VMWebVideoManager.m in Sources */,
+				3A768C279A9DFD7E9907BDA19F617499 /* VMWebVideoPrefetcher.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEA81463AFBA318C433A1B5C12692F76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBFA767BD9F0F3C7181196F5B3478B6F /* Pods-VMWebVideo_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		620D2030F772220CCF780059C57BF47F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = VMWebVideo;
+			target = 8359828F20689C698680384368E0A1A0 /* VMWebVideo */;
+			targetProxy = EEDA8C45BFB5C7CE6BF37DF7DBA00793 /* PBXContainerItemProxy */;
+		};
+		ED460D13937CB875529FF6C53FA09864 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "VMWebVideo-VMWebVideo";
+			target = 4D68CC04A17FFB31AEFB51E6C403DD89 /* VMWebVideo-VMWebVideo */;
+			targetProxy = 49DD8544579DDDFBFD43D26DDA8D62D3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		03CA91998D6773EC5D02B3DB87B8353E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		06078D69F9EB0E0BBDCB08D65BDF905F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B65FDFDB03AC7194CDE4BAEFDF3085C2 /* VMWebVideo-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = VMWebVideo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		0E8897F40ED0D0B67F94F689E990E8D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B65FDFDB03AC7194CDE4BAEFDF3085C2 /* VMWebVideo-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1.0.0;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/VMWebVideo/VMWebVideo-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VMWebVideo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VMWebVideo/VMWebVideo.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = VMWebVideo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3E12FD70C442D3703C629C2E94E46F80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 338C6A127B7B10DEC73D3B9F04420F3C /* Pods-VMWebVideo_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-VMWebVideo_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-VMWebVideo_Tests/Pods-VMWebVideo_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_VMWebVideo_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		60260125C73D62F9D1F4EEAF132D1C4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5102FB507E3ACA651CF406F7D3B44307 /* Pods-VMWebVideo_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-VMWebVideo_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-VMWebVideo_Tests/Pods-VMWebVideo_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_VMWebVideo_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C8EB7949727878FA61BAE676E2469AF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B65FDFDB03AC7194CDE4BAEFDF3085C2 /* VMWebVideo-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1.0.0;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/VMWebVideo/VMWebVideo-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VMWebVideo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VMWebVideo/VMWebVideo.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = VMWebVideo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CC5A48085DCC848A9C1536C3C2A1DB49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B65FDFDB03AC7194CDE4BAEFDF3085C2 /* VMWebVideo-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = VMWebVideo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */,
+				03CA91998D6773EC5D02B3DB87B8353E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E209D52773272476ECCD259B9348DCD /* Build configuration list for PBXNativeTarget "VMWebVideo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8EB7949727878FA61BAE676E2469AF8 /* Debug */,
+				0E8897F40ED0D0B67F94F689E990E8D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6280709CC3FC3D09764A3D31ABA57282 /* Build configuration list for PBXNativeTarget "VMWebVideo-VMWebVideo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC5A48085DCC848A9C1536C3C2A1DB49 /* Debug */,
+				06078D69F9EB0E0BBDCB08D65BDF905F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7659B9BB83138B6DBCAFD41FF8073DC8 /* Build configuration list for PBXNativeTarget "Pods-VMWebVideo_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60260125C73D62F9D1F4EEAF132D1C4D /* Debug */,
+				3E12FD70C442D3703C629C2E94E46F80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
