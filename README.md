@@ -1,6 +1,6 @@
 # VMWebVideo
 
-[![CI Status](http://img.shields.io/travis/Douglas Carney/VMWebVideo.svg?style=flat)](https://travis-ci.org/Douglas Carney/VMWebVideo)
+[![CI Status](http://img.shields.io/travis/VMWebVideo.svg?style=flat)](https://travis-ci.org/VMWebVideo)
 [![Version](https://img.shields.io/cocoapods/v/VMWebVideo.svg?style=flat)](http://cocoapods.org/pods/VMWebVideo)
 [![License](https://img.shields.io/cocoapods/l/VMWebVideo.svg?style=flat)](http://cocoapods.org/pods/VMWebVideo)
 [![Platform](https://img.shields.io/cocoapods/p/VMWebVideo.svg?style=flat)](http://cocoapods.org/pods/VMWebVideo)
